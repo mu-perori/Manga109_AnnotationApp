@@ -20,7 +20,7 @@ jobs:
     - name: Install yarn
       run: yarn install --pure-lockfile --prefer-offline
     - name: run prettier
-      run: yarn run prettier --check 01m-JavaScript/01canvas/Konva_version1/version1_mainFile 01m-JavaScript/01canvas/Konva_version2/version2_mainFile
+      run: yarn run prettier --check sigcc
   stylelint:
     runs-on: ubuntu-latest
     steps:
