@@ -1,0 +1,24 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:prettier/recommended",
+        "eslint:recommended"
+    ],
+    "rules": {
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ]
+    },
+    "globals": {
+        "$": false,
+        "Konva": false,
+        "swal": false,
+        "coordinateData": false
+    }
+}

@@ -1,0 +1,187 @@
+/* #id　.class */
+
+.side-by-side {
+	display: flex; /* レイアウトの指定(横並び) */
+	justify-content: space-between; /* 親要素の中でどう配置するか(両端と均等配置) */
+	margin: 20px 0; /* 上下　左右 */
+}
+
+#canvas {
+	width: 950px; /* これ以上狭くするとボタンと干渉してボタンが反応しなくなる */
+	background-color: white;
+	padding: 10px; /* 塗りの余白 */
+	border-radius: 7px; /* 角の丸み */
+	box-shadow: 0 10px 20px rgb(0 0 0 / 30%); /* x方向の大きさ y方向の大きさ 広がり 影の色 */
+	margin: 10px;
+}
+
+#side-contents {
+	width: 25vw;
+	background-color: white;
+	text-align: center; /* インラインの子要素を中央揃え */
+	padding: 16px; /* 塗りの余白 */
+	border-radius: 7px; /* 角の丸み */
+	box-shadow: 0 10px 20px rgb(0 0 0 / 30%); /* x方向の大きさ y方向の大きさ 広がり 影の色 */
+	margin: 15px;
+}
+
+/* 説明書き */
+summary {
+	display: block;
+}
+
+.information-title {
+	cursor: pointer; /* カーソルを指マークに */
+}
+
+.information {
+	/* 整える */
+	margin: 16px 0; /* 上下、左右の余白 */
+	padding: 0 8px; /* 塗りの余白 */
+	font-size: 16px; /* フォントサイズ */
+	background-color: #fff; /* 背景色 */
+	border-radius: 5px; /* 角の丸み */
+	border: 3px solid; /* 枠線 */
+	border-color: rgb(0 153 51 / 100%);
+}
+
+ol,
+ul {
+	text-align: left;
+}
+
+/* ボタン */
+button {
+	/* ブラウザ特有のスタイルを無効に */
+	appearance: none;
+
+	/* 整える */
+	margin: 8px; /* 上下、左右の隙間 */
+	border-radius: 5px; /* 角の丸み */
+	border: 0; /* 枠線を消す */
+	transition: 0.3s; /* ホバーの変化を滑らかに */
+}
+
+.return {
+	width: 90%;
+	height: 70px;
+	font-size: 18px; /* フォントサイズ */
+	font-weight: bold;
+}
+
+#change-mode {
+	width: 90%;
+	height: 70px;
+	font-size: 25px; /* フォントサイズ */
+	font-weight: bold;
+}
+
+#finish-annotation {
+	width: 90%;
+	height: 70px;
+	font-size: 18px; /* フォントサイズ */
+	font-weight: bold;
+}
+
+#move-page {
+	list-style-type: none; /* リストマーカーの指定(非表示) */
+	padding: 0; /* 余白を消す */
+	display: flex;
+	justify-content: space-around;
+	margin: 5px 0;
+}
+
+#previous-page,
+#next-page {
+	width: 110px;
+	height: 110px;
+	font-size: 13px; /* フォントサイズ */
+	font-weight: bold;
+	padding: 10px; /* 塗りの余白 */
+}
+
+.arrow-icon {
+	width: 60px;
+	height: 60px;
+}
+
+/* ボタンの色変化 */
+.green-mode-button {
+	cursor: pointer; /* カーソルを指マークに */
+	color: #fff; /* テキストカラー */
+	background-color: rgb(0 153 51 / 100%); /* 背景色 */
+	border: 4px solid; /* 枠線 */
+	border-color: rgb(0 153 51 / 100%);
+}
+
+.green-mode-button:hover {
+	color: rgb(0 153 51 / 100%); /* テキストカラー */
+	background-color: rgb(0 153 51 / 30%); /* 背景色 */
+}
+
+.green-page-button {
+	cursor: pointer; /* カーソルを指マークに */
+	fill: rgb(0 153 51 / 100%); /* 矢印の色 */
+	color: rgb(0 153 51 / 100%); /* テキストカラー */
+	background-color: rgb(0 153 51 / 0%); /* 背景色 */
+	border: 4px solid; /* 枠線 */
+	border-color: rgb(0 153 51 / 100%);
+}
+
+.green-page-button:hover {
+	fill: rgb(255 255 255 / 100%); /* 矢印の色 */
+	color: rgb(255 255 255 / 100%);
+	background-color: rgb(0 153 51 / 100%); /* 背景色 */
+}
+
+.white-button {
+	cursor: pointer; /* カーソルを指マークに */
+	color: rgb(0 153 51 / 100%); /* テキストカラー */
+	background-color: rgb(0 153 51 / 0%);
+	border: 4px solid; /* 枠線 */
+	border-color: rgb(0 153 51 / 100%);
+}
+
+.white-button:hover {
+	color: #fff; /* テキストカラー */
+	background-color: rgb(0 153 51 / 60%); /* 背景色 */
+}
+
+.yellow-button {
+	cursor: pointer; /* カーソルを指マークに */
+	color: rgb(255 255 255 / 100%); /* テキストカラー */
+	background-color: rgb(255 150 0 / 100%);
+	border: 4px solid; /* 枠線 */
+	border-color: rgb(255 150 0 / 100%);
+}
+
+.yellow-button:hover {
+	color: rgb(255 150 0 / 100%); /* テキストカラー */
+	background-color: rgb(255 150 0 / 20%); /* 背景色 */
+}
+
+.cant-push {
+	fill: rgb(255 255 255 / 100%); /* 矢印の色 */
+	color: rgb(255 255 255 / 100%); /* テキストカラー */
+	background-color: rgb(150 150 150 / 100%); /* 背景色 */
+	border: 4px solid; /* 枠線 */
+	border-color: rgb(150 150 150 / 100%);
+}
+
+/* アラートのボタン */
+
+/* .swal-button--confirm {
+	background-color: rgba(107, 214, 142, 1);
+}
+.swal-button--confirm:hover {
+	background-color: rgba(121, 209, 146, 1);
+} */
+
+/* confirmのokボタン */
+
+/* .swal-button--ok {
+	background-color: rgba(107, 214, 142, 1);
+}
+.swal-button--ok:hover {
+	background-color: rgba(121, 209, 146, 1);
+} */

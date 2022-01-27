@@ -1,0 +1,47 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 14
+        cache: "yarn"
+    - name: Install yarn
+      run: yarn install --pure-lockfile --prefer-offline
+    - name: run prettier
+      run: yarn run prettier --check 01m-JavaScript/01canvas/Konva_version1/version1_mainFile 01m-JavaScript/01canvas/Konva_version2/version2_mainFile
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 14
+        cache: "yarn"
+    - name: Install yarn
+      run: yarn install --pure-lockfile --prefer-offline
+    - name: Run stylelint
+      run: yarn csslint
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 14
+        cache: "yarn"
+    - name: Install yarn
+      run: yarn install --pure-lockfile --prefer-offline
+    - name: Run eslint
+      run: yarn jslint
