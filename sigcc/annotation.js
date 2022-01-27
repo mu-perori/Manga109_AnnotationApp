@@ -9,7 +9,7 @@ const textRgb = [255, 204, 0];
 const title = coordinateData["title"];
 const pages = coordinateData["pages"];
 
-const imgPath = "../" + title + "/" + title + "/";
+const imgPath = title + "/images/";
 
 // フラグ
 let isClicked = false; //コマが選択されているか否か
