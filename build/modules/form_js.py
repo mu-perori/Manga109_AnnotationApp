@@ -3,10 +3,6 @@
 
 from bs4 import BeautifulSoup
 
-# input_path = "/Volumes/USAGI02/03Programming/00_01漫画_読み順/Local/Manga109_released_2020_12_18"
-# output_path = "/Volumes/USAGI02/03Programming/00_01漫画_読み順/Local/output_folder"
-# src_path = "../sigcc"
-
 #各タグのid、xyの最大値最小値が入った辞書を返す
 def get_coordinate_dict(tag):
 	obj_id = tag.get("id")
@@ -30,8 +26,7 @@ def add_page_dict(page_dict, page, tag_name, key_name):
 	if made_list != []:
 		page_dict[key_name] = made_list
 
-def make_js(input_path, output_path, title_list):
-	for manga_title in title_list:
+def make_js(input_path, output_path, manga_title):
 		output_dict = {}#出力用の辞書を用意
 
 		#xmlファイルを開く

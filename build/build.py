@@ -13,11 +13,13 @@ def main():
     src_path = "../sigcc"
     title_list = setting_dirs.get_titles(args.input)
 
-    setting_dirs.make_dirs(args.output, title_list)
+    for t in title_list:
+        setting_dirs.make_dirs(args.output, t)
+        packing.copy_img(args.input, args.output, t)
+        form_js.make_js(args.input, args.output, t)
+        form_html.make_html(args.output, src_path, t)
+
     packing.copy_annotation(args.output, src_path)
     packing.copy_css(args.output, src_path)
-    packing.copy_img(args.input, args.output, title_list)
-    form_js.make_js(args.input, args.output, title_list)
-    form_html.make_html(args.output, src_path, title_list)
 
 main()
