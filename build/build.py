@@ -4,10 +4,11 @@ import argparse
 
 from modules import setting_dirs, packing, form_js, form_html
 
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', '--input', help='input path',  required=True)
-    parser.add_argument('-o', '--output', help='output path', required=True)
+    parser.add_argument("-i", "--input", help="input path", required=True)
+    parser.add_argument("-o", "--output", help="output path", required=True)
 
     args = parser.parse_args()
     src_path = "../sigcc"
@@ -21,5 +22,6 @@ def main():
 
     packing.copy_annotation(args.output, src_path)
     packing.copy_css(args.output, src_path)
+
 
 main()
