@@ -52,4 +52,4 @@ jobs:
     - name: Install black
       run: python3 -m pip install -r dev-requirements.txt
     - name: Run black
-      run: black --check --extend-exclude "/(sigcc|venv)/" .
+      run: black --check .
