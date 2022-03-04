@@ -19,7 +19,7 @@
 
 ### 作業環境の構築
 1. [Manga109データセット](http://www.manga109.org/ja/download.html)をダウンロードします。
-1. [このプロジェクトのコードをダウンロード](https://github.com/mu-perori/Manga109_AnnotationApp/releases)します。
+1. [このプロジェクトのコードをダウンロード](https://github.com/mu-perori/Manga109_AnnotationApp/archive/refs/tags/v1.0.zip)します。
 1. ターミナルから以下のコマンドを実行し、必要なパッケージをインストールします。
    ```
    python3 -m pip install -r requirements.txt
