@@ -11,7 +11,7 @@ def main():
     parser.add_argument("-o", "--output", help="output path", required=True)
 
     args = parser.parse_args()
-    src_path = "../sigcc"
+    src_path = "sigcc"
     title_list = setting_dirs.get_titles(args.input)
 
     for t in title_list:
