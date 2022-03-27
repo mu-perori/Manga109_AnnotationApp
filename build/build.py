@@ -9,9 +9,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", help="input path", required=True)
     parser.add_argument("-o", "--output", help="output path", required=True)
+    parser.add_argument("-v", "--version", help="version", default="version2") # sigccを指定することもできる
 
     args = parser.parse_args()
-    src_path = "sigcc"
+    src_path = args.version
     title_list = setting_dirs.get_titles(args.input)
 
     for t in title_list:
