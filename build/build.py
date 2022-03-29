@@ -9,10 +9,20 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", help="input path", required=True)
     parser.add_argument("-o", "--output", help="output path", required=True)
-    parser.add_argument("-v", "--version", help="version", default="version2") # sigccを指定することもできる
+    parser.add_argument(
+        "-v",
+        "--version",
+        help="version of annotation tool to build",
+        choices=["sigcc", "2"],
+        default="2",
+    )
 
     args = parser.parse_args()
+
     src_path = args.version
+    if src_path == "2":
+        src_path = "version2"
+
     title_list = setting_dirs.get_titles(args.input)
 
     for t in title_list:
