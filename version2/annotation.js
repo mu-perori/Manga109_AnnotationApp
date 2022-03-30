@@ -504,6 +504,7 @@ const ConnectingFrameAndTextClass = function () {
 	this.resetKeyStatus = () => {
 		key1 = "";
 		key2 = [];
+		unconnectedTexts = [];
 		isClicked = false;
 	};
 	// annotationをoutputObjに入れる
@@ -930,9 +931,6 @@ const deleteOutputObj = (processName) => {
 	// outputObjに引数のkeyのアノテーションが入っていたら取り出す
 	delete outputObj[processName];
 };
-this.processName = "alignment";
-this.processKey1 = "frameId";
-this.processKey2 = "textsInFrame";
 
 const searchArg = (targetId) => {
 	let targetArg; // boxItemsの中の何番目にあるのかを代入する変数
