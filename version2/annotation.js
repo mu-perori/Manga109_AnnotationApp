@@ -810,7 +810,7 @@ const confirmPreviousProcess = (messageTitle, messageText, func) => {
 	};
 	swal(options).then((value) => {
 		if (value) {
-			func;
+			func();
 		}
 	});
 };
@@ -1193,7 +1193,7 @@ $("#previous-process").on("click", () => {
 		confirmPreviousProcess(
 			"前の段階に戻る",
 			"この段階とその前の段階のアノテーション結果がリセットされますがよろしいですか？",
-			presentProcess.goPreviousProcess() // コマ順の場合は空
+			presentProcess.goPreviousProcess // コマ順の場合は空
 		);
 	}
 });
