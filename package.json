@@ -14,9 +14,9 @@
     "stylelint-config-standard": "^24.0.0"
   },
   "scripts": {
-    "fmt": "prettier --write sigcc",
-    "csslint": "stylelint sigcc/*.css",
-    "css-fmt": "stylelint --fix sigcc/*.css",
-    "jslint": "eslint sigcc/*.js"
+    "fmt": "prettier --write sigcc version2",
+    "csslint": "stylelint sigcc/*.css version2/*.css",
+    "css-fmt": "stylelint --fix sigcc/*.css version2/*.css",
+    "jslint": "eslint sigcc/*.js version2/*.js"
   }
 }
