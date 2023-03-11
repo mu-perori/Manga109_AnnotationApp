@@ -36,9 +36,9 @@
    python3 build/build.py -v sigcc -i <ダウンロードしたManga109データセットのフォルダのパス> -o <作業環境用のフォルダのパス>
 
    version2のアノテーションツールを使用したい場合は、
-   `-v version2` を指定して `build/build.py` を実行してください:
+   `-v 2` を指定して `build/build.py` を実行してください:
    ```
-   python3 build/build.py -v version2 -i <ダウンロードしたManga109データセットのフォルダのパス> -o <作業環境用のフォルダのパス>
+   python3 build/build.py -v 2 -i <ダウンロードしたManga109データセットのフォルダのパス> -o <作業環境用のフォルダのパス>
 
    ```
 
