@@ -7,5 +7,7 @@ exclude = '''
   | \.mypy_cache
   | \.venv
   | sigcc
+  | version2
+  | version3
 )/
 '''
