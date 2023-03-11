@@ -20,7 +20,7 @@ def add_page_dict(page_dict, page, tag_name, key_name):
     for item in got_list:
         made_dict = get_coordinate_dict(item)
         if tag_name == "text":
-            made_dict["dialogue"] = item.get_text().replace("\u3000", "　")
+            made_dict["dialogue"] = item.get_text().replace("\u3000", "").replace("\n", "")
         elif tag_name == "face" or tag_name == "body":
             made_dict["characterId"] = item.get("character")
         made_list.append(made_dict)
