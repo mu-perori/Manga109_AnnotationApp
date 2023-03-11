@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 from bs4 import BeautifulSoup
-import shutil, packing_pickup_pages as ppp, form_js
+import shutil, os
+from modules import packing_pickup_pages as ppp, form_js
 
 def form_data(input_path, output_path, src_path):
     # 変数定義
@@ -12,6 +13,8 @@ def form_data(input_path, output_path, src_path):
     title_list = [item.replace(f"{xml_path}/", "").replace(".xml", "") for item in ppp.get_files(xml_path, "xml")]
     output_dict = {"title": "マンガ読み順評価用データセット"}
     pages = []
+    
+    os.makedirs(f"{output_path}/images", exist_ok=True)
     
     # CSV読み込み
     pickup_list = ppp.read_csv(csv_path)
