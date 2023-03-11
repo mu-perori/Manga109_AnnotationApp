@@ -20,7 +20,7 @@ jobs:
     - name: Install yarn
       run: yarn install --pure-lockfile --prefer-offline
     - name: run prettier
-      run: yarn run prettier --check sigcc
+      run: yarn run prettier --check sigcc version2 version3
   stylelint:
     runs-on: ubuntu-latest
     steps:
