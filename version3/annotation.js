@@ -9,7 +9,7 @@ const yellow = [255, 204, 0];
 const title = coordinateData["title"];
 const pages = coordinateData["pages"];
 
-const imgPath = "Local/images/"; // テストと配布版で異なる場合があるから注意
+const imgPath = "images/";
 
 const pageClassList = ["第一四分位数", "中央値", "最大値"];
 
