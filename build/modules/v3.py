@@ -4,21 +4,25 @@ from bs4 import BeautifulSoup
 import shutil, os
 from modules import packing_pickup_pages as ppp, form_js
 
+
 def form_data(input_path, output_path, src_path):
     # 変数定義
     csv_path = f"{src_path}/pickup_list.csv"
     xml_path = f"{input_path}/annotations"
     image_path = f"{input_path}/images"
     manga_title = ""
-    title_list = [item.replace(f"{xml_path}/", "").replace(".xml", "") for item in ppp.get_files(xml_path, "xml")]
+    title_list = [
+        item.replace(f"{xml_path}/", "").replace(".xml", "")
+        for item in ppp.get_files(xml_path, "xml")
+    ]
     output_dict = {"title": "マンガ読み順評価用データセット"}
     pages = []
-    
+
     os.makedirs(f"{output_path}/images", exist_ok=True)
-    
+
     # CSV読み込み
     pickup_list = ppp.read_csv(csv_path)
-    
+
     # CSVの1行ずつfor文を回す
     for i in range(1, len(pickup_list)):
         # 今設定されているmanga_titleと現在の行のマンガのタイトルが違ったら
@@ -32,7 +36,9 @@ def form_data(input_path, output_path, src_path):
         index = pickup_list[i][0]
         page_index = pickup_list[i][3]
         class_no = pickup_list[i][4]
-        page_dict = make_page_dict(page_list[int(page_index)], index, genre, manga_title, page_index, class_no)
+        page_dict = make_page_dict(
+            page_list[int(page_index)], index, genre, manga_title, page_index, class_no
+        )
         pages.append(page_dict)
         # 該当ページの画像をリネームして指定のフォルダに入れる
         ppp.copy_img(f"{image_path}/{manga_title}/{page_index}", f"{output_path}/images/{index}")
@@ -42,6 +48,7 @@ def form_data(input_path, output_path, src_path):
 
     output_js(output_dict, output_path)
 
+
 def get_pages(target_path, manga_title):
     # xmlファイルを開く
     markup = open(target_path + "/" + manga_title + ".xml")
@@ -49,6 +56,7 @@ def get_pages(target_path, manga_title):
 
     # soupの中からpageタグを子要素を含めて全て取得して返す
     return soup.find_all("page")
+
 
 def make_page_dict(page, index, genre, manga_title, page_index, page_class):
     page_width = page.get("width")
@@ -60,11 +68,12 @@ def make_page_dict(page, index, genre, manga_title, page_index, page_class):
         "pageIndex": page_index,
         "pageClass": page_class,
         "width": page_width,
-        "height": page_height
+        "height": page_height,
     }
     form_js.add_page_dict(page_dict, page, "frame", "frame")
     form_js.add_page_dict(page_dict, page, "text", "text")
     return page_dict
+
 
 def output_js(output_dict, output_path):
     # JavaScriptとして書き出し

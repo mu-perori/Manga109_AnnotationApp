@@ -30,9 +30,9 @@ def main():
     else:
         if src_path == "2":
             src_path = "version2"
-    
+
         title_list = setting_dirs.get_titles(args.input)
-    
+
         for t in title_list:
             setting_dirs.make_dirs(args.output, t)
             packing.copy_img(args.input, args.output, t)
