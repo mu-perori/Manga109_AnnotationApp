@@ -1,5 +1,5 @@
 # Manga109 Annotation Application
-これは[Manga109データセット](http://www.manga109.org/ja/index.html)に含まれる漫画のコマ・テキストの読み順をアノテーションするWebアプリです。
+これは[Manga109データセット](http://www.manga109.org/ja/index.html)に含まれるマンガのコマ・テキストの読み順をアノテーションするWebアプリです。
 詳細は[こちらの論文](https://drive.google.com/file/d/1mIA6n2XiCl_GKNDYOi7GDN2uMRUAEzEc/view)を参照してください。
 
 ## 必要なソフトウェア
@@ -8,8 +8,8 @@
 
 ## 動作環境
 次の環境で動作することを確認しています。
-- OS: macOS 10.15.7
-- ブラウザ: Google Chrome 97.0.4692.99, Safari 15.3
+- OS: macOS 12.6.3
+- ブラウザ: Google Chrome 110.0.5481.177, Safari 16.3
 - Python 3.8
 
 ## 使い方
@@ -26,7 +26,7 @@
    python3 -m pip install -r requirements.txt
    ```
 1. ターミナルから以下のコマンドを実行すると、作業環境用のフォルダ
-が作成され、そのフォルダ内に作品ごとのフォルダとデータが作成されます。
+が作成され、そのフォルダ内にデータが作成されます。
    ```
    python3 build/build.py -i <ダウンロードしたManga109データセットのフォルダのパス> -o <作業環境用のフォルダのパス>
    ```
@@ -34,17 +34,16 @@
    `-v sigcc` を指定して `build/build.py` を実行してください:
    ```
    python3 build/build.py -v sigcc -i <ダウンロードしたManga109データセットのフォルダのパス> -o <作業環境用のフォルダのパス>
+   ```
 
    version2のアノテーションツールを使用したい場合は、
    `-v 2` を指定して `build/build.py` を実行してください:
    ```
    python3 build/build.py -v 2 -i <ダウンロードしたManga109データセットのフォルダのパス> -o <作業環境用のフォルダのパス>
-
    ```
 
 ### アノテーション方法
-
-1.作業環境フォルダ内にある`annotation_tool.html`をブラウザで開きます。
+1. 作業環境フォルダ内にある`annotation_tool.html`をブラウザで開きます。
 1. アプリ内の[作業の手順]をクリックして参照し、アノテーションを行ってください。
    作業のやりなおし等を行いたい場合は[ツールの説明]をクリックし、参照してください。
 
@@ -53,6 +52,11 @@
 1. 開いたフォルダ内にある`index.html`をブラウザで開きます。
 1. アプリ内の[作業の手順]をクリックして参照し、アノテーションを行ってください。
    作業のやりなおし等を行いたい場合は[ツールの説明]をクリックし、参照してください。
+
+## 関連リポジトリ
+- [このアノテーションツールでアノテーションした結果](https://github.com/mu-perori/Manga109-reading-order-dataset)
+- [アノテーション結果の可視化ツール](https://github.com/mu-perori/Manga109-reading-order-visualisation-tool)
+- [Manga109のルールベースの読み順推定ツール](https://github.com/mu-perori/Manga109-rule-based-reading-order-estimation-tool)
 
 ## 謝辞
 本アプリは科学研究費助成事業 基盤研究(B) （課題番号 21H03491）
