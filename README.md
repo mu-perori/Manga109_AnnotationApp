@@ -19,7 +19,7 @@
 
 ### 作業環境の構築
 1. [Manga109データセット](http://www.manga109.org/ja/download.html)をダウンロードします。
-1. [このプロジェクトのコードをダウンロード](https://github.com/mu-perori/Manga109_AnnotationApp/archive/refs/tags/v3.0.zip)して、解凍します。
+1. [このプロジェクトのコードをダウンロード](https://github.com/mu-perori/Manga109_AnnotationApp/archive/refs/tags/v3.0.1.zip)して、解凍します。
 1. ターミナルから以下のコマンドを実行し、コードが置いてあるフォルダに移動して必要なパッケージをインストールします。
    ```
    cd path/to/Manga109_AnnotationApp
