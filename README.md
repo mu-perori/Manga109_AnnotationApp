@@ -1,6 +1,6 @@
 # Manga109 Annotation Application
 これは[Manga109データセット](http://www.manga109.org/ja/index.html)に含まれるマンガのコマ・テキストの読み順をアノテーションするWebアプリです。
-詳細は[こちらの論文](https://drive.google.com/file/d/1mIA6n2XiCl_GKNDYOi7GDN2uMRUAEzEc/view)を参照してください。
+詳細は[こちらの論文](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=225319&item_no=1&page_id=13&block_id=8)を参照してください。
 
 ## 必要なソフトウェア
 - Python 3
